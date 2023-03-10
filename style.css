@@ -1,0 +1,330 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    -webKit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+
+    outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+:root{
+    font-size: 62.5%;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-size: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+   
+}
+.container{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(20, 20, 56);
+}
+
+header{
+    display: flex;
+    padding: 2rem 7%;
+
+    width: 100%;
+    height: max-content;
+
+    justify-content: space-around;
+    align-items: center;
+
+    position: fixed;
+    z-index: 999;
+}
+
+header #menu{
+    font-size: 3.5rem;
+    color: aliceblue;
+    display: none;
+}
+
+header .logo{
+    display: flex;
+    align-items: center;
+    font-size: 4rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: aliceblue;
+}
+header .logo ion-icon,header .logo span{
+    color: orangered;
+}
+.nav{
+    display: flex;
+    font-size: 2rem;
+    gap: 1.5rem;
+}
+.nav a{
+    color: aliceblue;
+    text-decoration: none;
+    transition: all .5s ease;
+}
+
+.nav a:hover{
+    color: orangered;
+}
+.cart ion-icon{
+    font-size: 5rem;
+    color: aliceblue;
+    cursor: pointer;
+   
+}
+.cart ion-icon:hover{
+    transform: translateY(0);
+    animation: cart 1.5s infinite linear;
+    color: orangered;
+}
+
+@keyframes cart{
+    0%{
+        transform: translateY(-5px);
+        
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(-5px);
+        
+    }
+}
+
+main{
+    padding: 2rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .image img{
+    width: 100%;
+}
+
+main .image img:hover{
+    transform: translateY(0);
+    animation: phones 1.5s infinite linear;
+    
+}
+
+@keyframes phones{
+    0%{
+        transform: translateY(-7px);
+        
+    }
+    50%{
+        transform: translateY(7px);
+    }
+    100%{
+        transform: translateY(-7px);
+        
+    }
+}
+
+
+main .content{
+    display: flex;
+    
+    flex-direction: column;
+}
+main .content h1{
+    font-size: 8rem;
+    color: aliceblue;
+}
+main .content h1 span{
+    color: orangered;
+}
+main .content p{
+    font-size: 1.7rem;
+    color: aliceblue;
+    margin-bottom: 3rem;
+}
+
+main .content h2{
+    font-size: 4rem;
+    color: aliceblue;
+}
+main .content h2 span{
+    color: orangered;
+}
+main .content a{
+    display: block;
+    padding: 1.5rem 7rem;
+    width: fit-content;
+    font-size: 4rem;
+    background-color: transparent;
+    border: .5rem solid aliceblue;
+    color: aliceblue;
+    transition: all .3s linear;
+
+    border-radius: .5rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    margin-top: 1rem;
+}
+
+main .content a::before{
+    content: ' ';
+    position: absolute;
+    width:0;
+    height:100%;
+    top: 0; right: 0;
+    background: aliceblue;
+    transition: .3s linear;
+    z-index: -1;
+}
+
+main .content a:hover::before{
+    width: 100%;
+    left: 0;
+}
+main .content a:hover{
+    
+    
+    color: black;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    top: 25%;
+
+    gap: 2rem;
+    padding: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+.column li{
+    list-style: none;
+}
+.column li img{
+    width: 7rem;
+    height: 7rem;
+}
+
+.column .row{
+    display: flex;
+    background-color: aqua;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+.column .row.tow{
+    background-color: orangered;
+}
+.column .row.tree{
+    background-color: pink;
+}
+
+.column .row:hover{
+    transform: translateY(0);
+    animation: row 1.5s infinite linear;
+    
+}
+
+@keyframes row{
+    0%{
+        transform: translateY(-5px);
+        
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(-5px);
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:748px) {
+
+    :root{
+        font-size:55%;
+    }
+    header #menu{
+        display: block;
+
+    }
+    .nav{
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 100%; left: 0; right: 0;
+            background-color: rgba(20, 20, 107, 0.214);
+            border:  .1rem rgba(0,0,0,.1); 
+            clip-path: polygon(0 0, 100% 0, 100% 0,0 0);
+        
+    }
+    .nav.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%,0% 100%);
+    
+}
+
+.nav a{
+    margin: 1.5rem;
+    padding: 1.5rem;
+    display: block;
+    border:.2rem rgba(0, 0, 0, 0.522) ;
+    border-left: .5rem solid orangered;
+}
+
+.cart{
+    font-size: 2rem;
+}
+}

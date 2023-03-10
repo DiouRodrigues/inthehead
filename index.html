@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>som</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer ></script>
+
+    
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet"> 
+
+</head>
+<body>
+    <div class="container" id="container">
+
+        <header>
+            <a class="logo"href="#"><ion-icon name="headset-sharp"></ion-icon>In<span>the</span>head</a>
+
+            <nav class="nav">
+                <a href="#home">home</a>
+                <a href="#products">products</a>
+                <a href="#about">about</a>
+            </nav>
+
+            <div class="cart"><ion-icon name="cart-outline"></ion-icon></div>
+
+            <div id="menu" ><ion-icon name="menu" ></ion-icon></div>
+        </header><!--header-->
+        <main id="products">
+
+            <div class="image"><img  src="./img/product1.png" alt="produto1" class ="one"  ></div>
+
+            <div class="content">
+                <h1>Head<span>phones</span> <br>In<span>The</span>Head</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.<br>
+                     Vitae corrupti voluptatibus vel explicabo quaerat ratione soluta facilis.<br>
+                     Ratione provident dolorem, in, animi odit omnis fugit cupiditate suscipit enim, veniam laborum?</p>
+
+                     <h2><span>R$</span>199,99</h2>
+                     <a class="btn" href="#"> Get it now!</a>
+            </div>
+        </main><!---->
+        <div class="column">
+            <div class="row one">
+                <li><img src="./img/main1.png" onclick="slider('./img/product1.png')" alt=""></li>
+            </div>
+            <div class="row tow">
+                <li><img src="./img/main2.png" onclick="slider('./img/product2.png')" alt=""></li>
+            </div>
+            <div class="row tree">
+                <li><img src="./img/main3.png" onclick="slider('./img/product3.png')" alt=""></li>
+            </div>
+        </div>
+
+    </div><!--container-->
+
+    <script  type="text/javascript">
+        function slider (anything){
+    document.querySelector ('.one').src = anything;
+};
+
+
+    </script>
+</body>
+</html>
